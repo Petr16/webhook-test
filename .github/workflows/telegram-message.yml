@@ -1,7 +1,7 @@
 name: To-message
 on:
     push:
-        branches: ['master','main']
+        branches: 'main'
 jobs:
     check-and-publish:
         name: "Test job"
@@ -12,6 +12,6 @@ jobs:
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
-                args: New version publish!
+                args: New version publish 9.2-minimal on main!
 
 
