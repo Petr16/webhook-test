@@ -15,7 +15,7 @@ jobs:
                 token: ${{ secrets.TELEGRAM_TOKEN }}
                 args: The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repositoryUrl}} 
                       and runner arch:${{runner.arch}}, name:${{runner.name}}, OS:${{runner.os}}, 
-                      all runner ${{toJson(runner)}}
+                      \n all runner ${{toJson(runner)}}
 
 
 
