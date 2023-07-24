@@ -13,18 +13,18 @@ jobs:
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
-                args: "The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repositoryUrl}} 
-                      \nall github ${{ toJson(github) }}
-                      \nall env ${{toJson(env)}}
-                      \nall vars ${{toJson(vars)}}
-                      \nall job ${{ toJson(job) }}
-                      \nall steps ${{ toJson(steps) }}
-                      \nall runner ${{toJson(runner)}}
-                      \nall secrets ${{ toJson(secrets) }}
-                      \nall strategy ${{ toJson(strategy) }}
-                      \nall matrix ${{ toJson(matrix) }}
-                      \nall needs ${{ toJson(needs) }}
-                      \nall inputs ${{ toJson(inputs) }}"
+                # args: "The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repositoryUrl}} 
+                #       \nall github ${{ toJson(github) }}
+                #       \nall env ${{toJson(env)}}
+                #       \nall job ${{ toJson(job) }}
+                #       \nall steps ${{ toJson(steps) }}
+                #       \nall runner ${{toJson(runner)}}
+                #       \nall secrets ${{ toJson(secrets) }}
+                #       \nall strategy ${{ toJson(strategy) }}
+                #       \nall matrix ${{ toJson(matrix) }}
+                #       \nall needs ${{ toJson(needs) }}
+                #       \nall inputs ${{ toJson(inputs) }}"
+                args: all inputs ${{ toJson(inputs) }}
 
 
 
