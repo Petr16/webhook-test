@@ -14,8 +14,18 @@ jobs:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
                 args: "The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repositoryUrl}} 
-                      and runner arch:${{runner.arch}}, name:${{runner.name}}, OS:${{runner.os}}, 
-                      \n all runner ${{toJson(runner)}}"
+                      \nall github ${{ toJson(github) }}
+                      \nall env ${{toJson(env)}}
+                      \nall vars ${{toJson(vars)}}
+                      \nall job ${{ toJson(job) }}
+                      \nall jobs ${{ toJson(jobs) }}
+                      \nall steps ${{ toJson(steps) }}
+                      \nall runner ${{toJson(runner)}}
+                      \nall secrets ${{ toJson(secrets) }}
+                      \nall strategy ${{ toJson(strategy) }}
+                      \nall matrix ${{ toJson(matrix) }}
+                      \nall needs ${{ toJson(needs) }}
+                      \nall inputs ${{ toJson(inputs) }}"
 
 
 
