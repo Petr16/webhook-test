@@ -12,6 +12,6 @@ jobs:
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
-                args: New version publish only use ubuntu-latest on main! https://github.com/actions/runner-images/tree/main
+                args: ${{GITHUB_ACTION}}
 
 
