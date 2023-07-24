@@ -13,6 +13,6 @@ jobs:
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
-                args: The ${{github.event_name}} by name actor is ${{github.actor}} on api ${{github.triggering_actor}}
+                args: The ${{github.event_name}} by name actor is ${{github.actor}} on api ${{github.base_ref}}
 
 
