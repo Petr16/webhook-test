@@ -32,8 +32,7 @@ jobs:
                        \nautor:${{toJson(github.event.commits[0].author)}}
                        \ncommitter:${{toJson(github.event.commits[0].committer)}}
                        \ncompare:${{github.event.compare}}
-                       \npusher:${{toJson(github.event.pusher)}}
-                       \ncommits:${{toJson(github.event.commits)}}"
+                       \npusher:${{toJson(github.event.pusher)}}"
 
 
 
