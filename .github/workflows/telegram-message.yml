@@ -25,7 +25,8 @@ jobs:
                 #       \nall needs ${{ toJson(needs) }}
                 #       \nall inputs ${{ toJson(inputs) }}"
                 args: "The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repositoryUrl}}
-                       \nnow commit:${{github.event.after}}"
+                       \nnow commit:${{github.event.after}}
+                       \ncommits:${{toJson(github.event.commits)}}"
 
 
 
