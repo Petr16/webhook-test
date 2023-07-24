@@ -1,17 +1,17 @@
 name: To-message
 on:
     push:
-        branches: 'main'
+        branches: ['master','main']
 jobs:
     check-and-publish:
         name: "Test job"
-        runs-on: rockylinux:9.2-minimal #ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: "telegram Notification"
               uses: "appleboy/telegram-action@master"
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
-                args: New version publish 9.2-minimal on main!
+                args: New version publish only use ubuntu-latest on main! https://github.com/actions/runner-images/tree/main
 
 
