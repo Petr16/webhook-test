@@ -24,7 +24,7 @@ jobs:
                 #       \nall matrix ${{ toJson(matrix) }}
                 #       \nall needs ${{ toJson(needs) }}
                 #       \nall inputs ${{ toJson(inputs) }}"
-                args: all inputs ${{ toJson(inputs) }}
+                args: all github ${{ toJson(github) }}
 
 
 
