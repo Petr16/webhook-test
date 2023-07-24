@@ -26,14 +26,14 @@ jobs:
                 #       \nall inputs ${{ toJson(inputs) }}"
                 args: "The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repository}}
                        \n
-                       \nPre-commit:${{github.event.before}} and him url ${{github.event.repository.url}}/commit/${{github.event.before}}
-                       \nNow-commit:${{github.event.after}} and him url ${{github.event.repository.url}}/commit/${{github.event.after}}
-                       \nName:${{github.event.commits[0].message}}
-                       \nTime:${{github.event.commits[0].timestamp}}
-                       \nAutor:${{toJson(github.event.commits[0].author)}}
-                       \nCommitter:${{toJson(github.event.commits[0].committer)}}
-                       \nCompare:${{github.event.compare}}
-                       \nPusher:${{toJson(github.event.pusher)}}"
+                       \nPre-commit: ${{github.event.before}} and him url ${{github.event.repository.url}}/commit/${{github.event.before}}
+                       \nNow-commit: ${{github.event.after}} and him url ${{github.event.repository.url}}/commit/${{github.event.after}}
+                       \nName: ${{github.event.commits[0].message}}
+                       \nTime: ${{github.event.commits[0].timestamp}} and updated_at: ${{github.event.repository.updated_at}}
+                       \nAutor: ${{toJson(github.event.commits[0].author)}}
+                       \nCommitter: ${{toJson(github.event.commits[0].committer)}}
+                       \nCompare: ${{github.event.compare}}
+                       \nPusher: ${{toJson(github.event.pusher)}}"
 
 
 
