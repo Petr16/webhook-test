@@ -27,7 +27,7 @@ jobs:
                 args: "The ${{github.event_name}} by name actor is ${{github.actor}} on repo ${{github.repositoryUrl}}
                        \npre-commit:${{github.event.before}} and him url https://github.com/Petr16/webhook-test/commit/${{github.event.before}}
                        \nnow-commit:${{github.event.after}} and him url https://github.com/Petr16/webhook-test/commit/${{github.event.after}}
-                       \nname:${{toJson(github.event.commits)[0]}}
+                       \nname:${{github.event.commits[0].id}}
                        \ntime:${{github.event.timestamp}}
                        \nautor:${{toJson(github.event.commits.author)}}
                        \ncommitter:${{toJson(github.event.commits.committer)}}
