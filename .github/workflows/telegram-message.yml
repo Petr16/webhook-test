@@ -1,7 +1,8 @@
 name: To-message
 on:
-    push:
-        branches: ['master','main']
+    #push:
+        #branches: ['master','main']
+    
 jobs:
     check-and-publish:
         name: "Test job"
@@ -12,6 +13,6 @@ jobs:
               with:
                 to: ${{ secrets.TELEGRAM_CHAT_ID }}
                 token: ${{ secrets.TELEGRAM_TOKEN }}
-                args: ${{github.event_name}}
+                args: ${{github.event_name}} and is name ${{github.actor}}
 
 
