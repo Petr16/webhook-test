@@ -18,7 +18,6 @@ jobs:
                       \nall env ${{toJson(env)}}
                       \nall vars ${{toJson(vars)}}
                       \nall job ${{ toJson(job) }}
-                      \nall jobs ${{ toJson(jobs) }}
                       \nall steps ${{ toJson(steps) }}
                       \nall runner ${{toJson(runner)}}
                       \nall secrets ${{ toJson(secrets) }}
