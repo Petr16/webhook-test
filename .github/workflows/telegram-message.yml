@@ -1,7 +1,7 @@
 name: To-message
 on:
     push:
-        branches: ['master','main']
+        branches: 'release' #['master','main']
     
 jobs:
     check-and-publish:
